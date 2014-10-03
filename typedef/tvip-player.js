@@ -17,6 +17,7 @@ TVIPPlayer.prototype.reset = function() {};
  * Параметр mode может принимать значения:
  * vod - данный URL содержит VOD-файл (с конечной длиной);
  * live - дынный URL содержит live ТВ-поток (можно использовать Timeshift и DVR);
+ * '' - судя по примерам - тоже самое, что и vod
  * Примеры:
  * playUrl ("udp://239.1.1.1", "live"); // начать проигрывание multicast-потока;
  * playUrl ("http://domain.tv/movies/movie.mkv", ""); // начать проигрывание видео-файла по http;
