@@ -58,14 +58,6 @@ PlatformTVIP.prototype.buildApp = function (zbApp, dir, callback) {
 					zbApp.utils.copy(customFiles[name], targetPath);
 				}
 
-				var appPackage = zbApp.getAppPackageConfig();
-				zbApp.utils.renderTemplateDir(join(__dirname, 'plugin'), dir, {
-					'pluginDirName': appPackage.name,
-					'shortDesc': appPackage.name,
-					'longDesc': appPackage.description || appPackage.name || '',
-					'version': appPackage.version
-				});
-
 				callback();
 			}.bind(this));
 		}
