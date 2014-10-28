@@ -25,7 +25,7 @@ PlatformTVIP.prototype.getConfig = function () {
 				join(__dirname, 'typedef', 'tvip-event.js'),
 				join(__dirname, 'typedef', 'tvip-player.js'),
 				join(__dirname, 'typedef', 'tvip-recorder.js'),
-				join(__dirname, 'typedef', 'tvip-stb')
+				join(__dirname, 'typedef', 'tvip-stb.js')
 			]
 		}
 	};
