@@ -152,7 +152,7 @@ TVIPPlayer.prototype.getStreamsCount = function() {};
 
 /**
  * @param {number} index
- * @return {TVIPPlayer.streamInfo}
+ * @return {TVIPPlayer.StreamInfo}
  */
 TVIPPlayer.prototype.getStreamInfo = function(index) {};
 
@@ -184,14 +184,14 @@ TVIPPlayer.prototype.setCurrentAudioStreamIndex = function(index) {};
  * id - внутренний идентификатор (PID);
  * codec - название кодека потока;
  * lang - для аудиопотоков 3 буквенный код языка.
- * typedef {{
+ * @typedef {{
  *      type: TVIPPlayer.StreamInfoType,
  *      id: number,
  *      codec: string,
  *      lang : string
  *  }}
  */
-TVIPPlayer.streamInfo;
+TVIPPlayer.StreamInfo;
 
 
 /**
