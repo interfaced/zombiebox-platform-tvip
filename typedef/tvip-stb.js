@@ -167,3 +167,12 @@ TVIPStb.prototype.showVirtualKeyboard = function(show) {};
  * @return {void}
  */
 TVIPStb.prototype.reset = function() {};
+
+
+/**
+ * НЕДОКУММЕНТИРОВАННЫЙ МЕТОД. ВЗЯТ ИЗ КОММЕНТА Владимира Манова https://vidimax.basecamphq.com/projects/12510569-tvip/todo_items/192245361/comments#comment_300846908
+ * Для использования arescam достаточно писать TvipStb.execCommand("arescam параметры")
+ * @param {string} command
+ * @return {void}
+ */
+TVIPStb.prototype.execCommand = function(command) {};
