@@ -36,8 +36,10 @@ PlatformTVIP.prototype.buildApp = function (zbApp, dir) {
 	var buildHelper = zbApp.getBuildHelper();
 
 	return buildHelper.writeIndexHtml(path.join(dir, 'index.html'), this.getName())
-		.then(function() {
+		.then(function(warnings) {
 			buildHelper.copyCustomWebFiles(dir);
+
+			return warnings;
 		});
 };
 
