@@ -1,6 +1,6 @@
 var path = require('path');
-var join = path.join;
-var fs = require('fs');
+
+
 
 /**
  * @implements {ZBPlatform}
@@ -8,30 +8,43 @@ var fs = require('fs');
  */
 PlatformTVIP = function () {};
 
+
+/**
+ * @inheritDoc
+ */
 PlatformTVIP.prototype.getName = function () {
 	return 'tvip';
 };
 
-/** @inheritDoc */
+
+/**
+ * @inheritDoc
+ */
 PlatformTVIP.prototype.getPublicDir = function () {
-	return join(__dirname, 'lib');
+	return path.join(__dirname, 'lib');
 };
 
-/** @inheritDoc */
+
+/**
+ * @inheritDoc
+ */
 PlatformTVIP.prototype.getConfig = function () {
 	return {
 		"compilation": {
 			"externs": [
-				join(__dirname, 'typedef', 'tvip-event.js'),
-				join(__dirname, 'typedef', 'tvip-player.js'),
-				join(__dirname, 'typedef', 'tvip-recorder.js'),
-				join(__dirname, 'typedef', 'tvip-stb.js')
+				path.join(__dirname, 'typedef', 'tvip-event.js'),
+				path.join(__dirname, 'typedef', 'tvip-player.js'),
+				path.join(__dirname, 'typedef', 'tvip-recorder.js'),
+				path.join(__dirname, 'typedef', 'tvip-stb.js')
 			]
 		}
 	};
 };
 
-/** @inheritDoc */
+
+/**
+ * @inheritDoc
+ */
 PlatformTVIP.prototype.buildApp = function (zbApp, dir) {
 	var buildHelper = zbApp.getBuildHelper();
 
