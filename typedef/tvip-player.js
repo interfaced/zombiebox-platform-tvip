@@ -122,18 +122,11 @@ TVIPPlayer.prototype.getMute = function() {};
 
 
 /**
- * Устанавливает режим Aspect Ratio.
- * @param {number} mode
+ * Устанавливает режим aspect ratio. На данный момент поддерживаются значения: «box» - Оригинал, «full» - На весь экран, «zoom» - Увеличенный.
+ * @param {TVIPPlayer.Ratio} mode
  * @return {void}
  */
-TVIPPlayer.prototype.setAspectMode = function(mode) {};
-
-
-/**
- * Возвращает режим Aspect Ratio.
- * @return {number}
- */
-TVIPPlayer.prototype.getAspectMode = function() {};
+TVIPPlayer.prototype.setAspectRatio = function(mode) {};
 
 
 /**
@@ -201,4 +194,14 @@ TVIPPlayer.StreamInfoType = {
 	VIDEO: 'v',
 	AUDIO: 'a',
 	SUBTITLE: 's'
+};
+
+
+/**
+ * @enum {string}
+ */
+TVIPPlayer.Ratio = {
+	NORMAL: 'box',
+	FULL: 'full',
+	ZOOM: 'zoom'
 };
