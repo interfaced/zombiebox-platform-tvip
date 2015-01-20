@@ -1,6 +1,6 @@
 var path = require('path');
-var join = path.join;
-var fs = require('fs');
+
+
 
 /**
  * @implements {ZBPlatform}
@@ -8,64 +8,52 @@ var fs = require('fs');
  */
 PlatformTVIP = function () {};
 
+
+/**
+ * @inheritDoc
+ */
 PlatformTVIP.prototype.getName = function () {
 	return 'tvip';
 };
 
-/** @inheritDoc */
+
+/**
+ * @inheritDoc
+ */
 PlatformTVIP.prototype.getPublicDir = function () {
-	return join(__dirname, 'lib');
+	return path.join(__dirname, 'lib');
 };
 
-/** @inheritDoc */
+
+/**
+ * @inheritDoc
+ */
 PlatformTVIP.prototype.getConfig = function () {
 	return {
 		"compilation": {
 			"externs": [
-				join(__dirname, 'typedef', 'tvip-event.js'),
-				join(__dirname, 'typedef', 'tvip-player.js'),
-				join(__dirname, 'typedef', 'tvip-recorder.js'),
-				join(__dirname, 'typedef', 'tvip-stb.js')
+				path.join(__dirname, 'typedef', 'tvip-event.js'),
+				path.join(__dirname, 'typedef', 'tvip-player.js'),
+				path.join(__dirname, 'typedef', 'tvip-recorder.js'),
+				path.join(__dirname, 'typedef', 'tvip-stb.js')
 			]
 		}
 	};
 };
 
-/** @inheritDoc */
-PlatformTVIP.prototype.buildApp = function (zbApp, dir, callback) {
-	var styles = zbApp.getCompressedStyles();
-	zbApp.getCompressedScripts(function (stderr, stdout) {
-		if (!stdout) {
-			console.error('Compilation fail.'.red);
-			console.error(stderr.red);
-			callback(stderr);
-		} else {
-			var appCode = zbApp.getIndexHTMLContent({
-				inlineScripts: [stdout],
-				inlineStyles: [styles]
-			});
-			console.error(stderr);
-			var target = fs.createWriteStream(path.join(dir, 'index.html'));
-			target.end(appCode, 'utf-8', function () {
 
-				var customFiles = zbApp.getCustomWebFiles();
-				for (var name in customFiles) if (customFiles.hasOwnProperty(name)) {
-					var targetPath = join(dir, name);
-					var targetDir = path.dirname(targetPath);
-					if (!fs.existsSync(targetDir)) {
-						zbApp.utils.mkdirP(targetDir);
-					}
-					zbApp.utils.copy(customFiles[name], targetPath);
-				}
+/**
+ * @inheritDoc
+ */
+PlatformTVIP.prototype.buildApp = function (zbApp, dir) {
+	var buildHelper = zbApp.getBuildHelper();
 
-				callback();
-			}.bind(this));
-		}
-	}.bind(this), {
-		define: [
-			'PLATFORM_NAME=\\"' + this.getName() + '\\"'
-		]
-	});
+	return buildHelper.writeIndexHtml(path.join(dir, 'index.html'), this.getName())
+		.then(function(warnings) {
+			buildHelper.copyCustomWebFiles(dir);
+
+			return warnings;
+		});
 };
 
 module.exports = PlatformTVIP;
