@@ -185,23 +185,3 @@ TVIPPlayer.prototype.setCurrentAudioStreamIndex = function(index) {};
  *  }}
  */
 TVIPPlayer.StreamInfo;
-
-
-/**
- * @enum {string}
- */
-TVIPPlayer.StreamInfoType = {
-	VIDEO: 'v',
-	AUDIO: 'a',
-	SUBTITLE: 's'
-};
-
-
-/**
- * @enum {string}
- */
-TVIPPlayer.Ratio = {
-	NORMAL: 'box',
-	FULL: 'full',
-	ZOOM: 'zoom'
-};
