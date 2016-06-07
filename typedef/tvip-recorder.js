@@ -58,8 +58,9 @@ TVIPRecorder.prototype.getRecord = function(id) {};
 
 
 /**
- * <id>, <name>, <start>, <end> - соответствуют параметром метода addRecord;
- * <status> - See tvip.consts.TVIPRecorder for possible values and description
+ * id, name, startTime, endTime - соответствуют параметром метода addRecord,
+ * url - url потока,
+ * status - See tvip.consts.TVIPRecorder for possible values and description
  * @typedef {{
  *      id: string,
  *      name: string,
