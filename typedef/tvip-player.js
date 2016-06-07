@@ -123,7 +123,7 @@ TVIPPlayer.prototype.getMute = function() {};
 
 /**
  * Устанавливает режим aspect ratio. На данный момент поддерживаются значения: «box» - Оригинал, «full» - На весь экран, «zoom» - Увеличенный.
- * @param {string} mode See (tvip.consts.TVIPPlayer) for possible values.
+ * @param {string} mode See tvip.consts.TVIPPlayer for possible values.
  * @return {void}
  */
 TVIPPlayer.prototype.setAspectRatio = function(mode) {};
@@ -173,7 +173,7 @@ TVIPPlayer.prototype.setCurrentAudioStreamIndex = function(index) {};
 
 
 /**
- * type - тип медиапотока: See (tvip.consts.TVIPPlayer) for possible values
+ * type - тип медиапотока: See tvip.consts.TVIPPlayer for possible values
  * id - внутренний идентификатор (PID);
  * codec - название кодека потока;
  * lang - для аудиопотоков 3 буквенный код языка.
