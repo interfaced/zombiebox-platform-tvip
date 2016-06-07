@@ -10,6 +10,7 @@ function TVIPEvent() {}
  * Вызывается при изменении статуса воспроизведения медиаплеера.
  * oldState - предыдущий статус плеера,
  * newState - новый статус плеера.
+ * See tvip.consts.TVIPEvent for possible values
  * @param {number} oldState
  * @param {number} newState
  */
