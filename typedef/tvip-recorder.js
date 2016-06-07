@@ -68,15 +68,3 @@ TVIPRecorder.prototype.getRecord = function(id) {};
  * }}
  */
 TVIPRecorder.record;
-
-
-/**
- *
- * @enum {string}
- */
-TVIPRecorder.RecordStatusType = {
-	WAITING: 'waiting',
-	RECORDING: 'recording',
-	FINISHED: 'finished',
-	ERROR: 'error'
-};
