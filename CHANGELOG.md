@@ -9,5 +9,5 @@ Add ViewPort class which is responsible for managing display area sizes and aspe
 
 ##Improvements
 
-* [#](https://bitbucket.org/interfaced/zombiebox-platform-tvip/pull-requests/)
+* [#11](https://bitbucket.org/interfaced/zombiebox-platform-tvip/pull-requests/11)
 Removed call _createViewPort() method from Video constructor `[issue #4319]`
