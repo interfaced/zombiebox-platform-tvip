@@ -13,3 +13,8 @@ Add ViewPort class which is responsible for managing display area sizes and aspe
 Removed call _createViewPort() method from Video constructor `[issue #4319]`
 * [#12](https://bitbucket.org/interfaced/zombiebox-platform-tvip/pull-requests/12)
 Created new namespace for containing platform's constant values `[issue #4378]`
+
+## Fixes
+
+* [#13](https://bitbucket.org/interfaced/zombiebox-platform-tvip/pull-requests/13)
+Move TVIPRecorder consts to separate namespace `[issue #4400]`
