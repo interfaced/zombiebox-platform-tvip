@@ -79,6 +79,20 @@ zb.device.platforms.tvip.Video = class extends zb.device.Video {
 		this._startUpdatePosition = this._startUpdatePosition.bind(this);
 	}
 
+	/**
+	 * @override
+	 */
+	hasFeatureAspectRatio() {
+		//todo
+	}
+
+	/**
+	 * @override
+	 */
+	isAspectRatioSupported(ratio) {
+		//todo
+	}
+
 	/** @override */
 	play(url, startFrom) {
 		let mode = '';
@@ -137,7 +151,7 @@ zb.device.platforms.tvip.Video = class extends zb.device.Video {
 
 	/** @override */
 	getPlaybackRate() {
-		return 1
+		return 1;
 	}
 
 	/** @override */
@@ -145,7 +159,7 @@ zb.device.platforms.tvip.Video = class extends zb.device.Video {
 		const minPosition = this._tvipPlayer.getMinPositionMsec();
 		const maxPosition = this._tvipPlayer.getMaxPositionMsec();
 		if (milliseconds < minPosition) {
-			milliseconds = minPosition
+			milliseconds = minPosition;
 		} else if (milliseconds > maxPosition) {
 			milliseconds = maxPosition;
 		}
@@ -191,6 +205,29 @@ zb.device.platforms.tvip.Video = class extends zb.device.Video {
 
 	/** @override */
 	setAspectRatio(ratio) {
+		//todo
+	}
+
+	/**
+	 * @override
+	 */
+	setDisplayArea(x, y, width, height) {
+		//todo
+	}
+
+
+	/**
+	 * @override
+	 */
+	setDisplayFullScreen(state) {
+		//todo
+	}
+
+
+	/**
+	 * @override
+	 */
+	isDisplayFullScreen() {
 		//todo
 	}
 
@@ -326,7 +363,6 @@ zb.device.platforms.tvip.Video = class extends zb.device.Video {
 		}
 	}
 };
-
 
 
 /**
