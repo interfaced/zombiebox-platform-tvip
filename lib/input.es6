@@ -18,6 +18,8 @@ goog.require('zb.device.Input');
 zb.device.platforms.tvip.Input = class extends zb.device.Input {
 	constructor() {
 		super();
+
+
 		//Rewriting Keys binding
 		const keys = zb.device.input.Keys;
 		this._map[82] = keys.PLAY_PAUSE;

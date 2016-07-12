@@ -23,6 +23,14 @@ zb.device.platforms.tvip.Device = class extends zb.device.Device {
 	constructor() {
 		super();
 
+
+		/**
+		 * default value chromo key
+		 * @const {number}
+		 */
+		this.DEFAULT_CHROMA_KEY = 0xFF00FF;//Fuchsia
+
+
 		/**
 		 * @type {zb.device.platforms.tvip.Input}
 		 */
@@ -74,12 +82,6 @@ zb.device.platforms.tvip.Device = class extends zb.device.Device {
 		 */
 		this._tvipEvent = window['TvipEvent'];
 
-
-		/**
-		 * default value chromo key
-		 * @const {number}
-		 */
-		this.DEFAULT_CHROMA_KEY = 0xFF00FF;//Fuchsia
 
 		this._tvipStb.reset();
 		this._tvipPlayer.reset();//if app was crashed it stop playing
