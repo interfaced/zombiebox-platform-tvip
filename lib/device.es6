@@ -51,9 +51,9 @@ zb.device.platforms.tvip.Device = class extends zb.device.Device {
 
 		/**
 		 * @type {{
-      *     value: number,
-      *     isMute: boolean
-      * }}
+		 *     value: number,
+		 *     isMute: boolean
+		 * }}
 		 * @protected
 		 */
 		this._volume;
