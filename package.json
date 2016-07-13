@@ -3,7 +3,7 @@
   "version": "0.0.12",
   "dependencies": {},
   "devDependencies": {
-    "zombiebox-platform-scripts-collection": "bitbucket:interfaced/zombiebox-platform-scripts-collection#v0.2.0"
+    "zombiebox-platform-scripts-collection": "bitbucket:interfaced/zombiebox-platform-scripts-collection#v0.3.0"
   },
   "scripts": {
     "release.start": "release.start",
