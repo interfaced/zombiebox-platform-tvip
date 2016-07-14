@@ -28,42 +28,58 @@ zb.device.platforms.tvip.Info = class extends zb.device.Info {
 		this._tvipStb = tvipStb;
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	type() {
 		return 'tvip';
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	version() {
 		return '1.0';
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	manufacturer() {
 		return 'TVIP';
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	model() {
 		return 'N/A';
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	serialNumber() {
 		return 'N/A';
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	softwareVersion() {
 		return this._tvipStb.getApiVersion().toString();
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	hardwareVersion() {
 		return '1.0';
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	osdResolutionType() {
 		if (window.outerWidth >= 1920 && window.outerHeight >= 1080) {
 			return zb.device.Resolution.FULL_HD;

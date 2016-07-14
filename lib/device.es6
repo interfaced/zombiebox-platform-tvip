@@ -88,7 +88,9 @@ zb.device.platforms.tvip.Device = class extends zb.device.Device {
 		this._tvipStb.setColorKey(this.DEFAULT_CHROMA_KEY);
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	init() {
 		this.info = new zb.device.platforms.tvip.Info(this._tvipStb);
 		this.input = new zb.device.platforms.tvip.Input;
@@ -97,32 +99,44 @@ zb.device.platforms.tvip.Device = class extends zb.device.Device {
 		this._fireEvent(this.EVENT_READY);
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	createVideo() {
 		return new zb.device.platforms.tvip.Video(this._tvipPlayer, this._tvipEvent);
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	exit() {
 		location.href = 'about:back';
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	hasOSDAlphaBlendingFeature() {
 		return true;
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	hasOSDChromaKeyFeature() {
 		return true;
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	getIP() {
 		return '127.0.0.1';
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	getMAC() {
 		return this._tvipStb.getMainMacAddress();
 	}

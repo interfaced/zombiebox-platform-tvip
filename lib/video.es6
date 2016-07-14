@@ -93,7 +93,9 @@ zb.device.platforms.tvip.Video = class extends zb.device.Video {
 		//todo
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	play(url, startFrom) {
 		let mode = '';
 		if (url.indexOf('udp') > -1) {
@@ -105,17 +107,23 @@ zb.device.platforms.tvip.Video = class extends zb.device.Video {
 		this._tvipPlayer.playUrl(url, mode);
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	resume() {
 		this._tvipPlayer.unpause();
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	pause() {
 		this._tvipPlayer.pause();
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	togglePause() {
 		if (this._state === zb.device.IVideo.State.PLAYING) {
 			this.pause();
@@ -124,37 +132,51 @@ zb.device.platforms.tvip.Video = class extends zb.device.Video {
 		}
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	stop() {
 		this._tvipPlayer.stop();
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	forward() {
 		//
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	rewind() {
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	destroy() {
 		this._tvipPlayer.stop();
 		this._tvipPlayer.reset();
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	setPlaybackRate(rate) {
 		//do nothing
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	getPlaybackRate() {
 		return 1;
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	setPosition(milliseconds) {
 		const minPosition = this._tvipPlayer.getMinPositionMsec();
 		const maxPosition = this._tvipPlayer.getMaxPositionMsec();
@@ -167,43 +189,59 @@ zb.device.platforms.tvip.Video = class extends zb.device.Video {
 		this._tvipPlayer.seek(milliseconds);
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	getPosition() {
 		return this._tvipPlayer.getCurrentPositionMsec();
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	getDuration() {
 		return this._tvipPlayer.getMaxPositionMsec();
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	setVolume(zbValue) {
 		this._tvipPlayer.setVolume(zbValue);
 		this._fireEvent(this.EVENT_VOLUME_CHANGE, zbValue);
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	getVolume() {
 		return this._tvipPlayer.getVolume();
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	setMuted(value) {
 		this._tvipPlayer.setMute(value);
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	getMuted() {
 		return this._tvipPlayer.getMute();
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	getAspectRatio() {
 		//todo
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	setAspectRatio(ratio) {
 		//todo
 	}

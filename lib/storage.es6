@@ -31,22 +31,30 @@ zb.device.platforms.tvip.Storage = class {
 		this._prefix = '';
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	setKeyPrefix(prefix) {
 		this._prefix = prefix;
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	getItem(key) {
 		return this._tvipStb.getEnvValue(this._prefix + key);
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	setItem(key, value) {
 		this._tvipStb.setEnvValue(this._prefix + key, value);
 	}
 
-	/** @override */
+	/**
+	 * @override
+	 */
 	removeItem(key) {
 		this._tvipStb.setEnvValue(this._prefix + key, '');
 	}
