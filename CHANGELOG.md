@@ -10,5 +10,5 @@
 * **#4378** Created new namespace for containing platform's constant values
 
 ## Fixes
-* **#4400** Move TVIPRecorder consts to separate namespace=======
+* **#4400** Move TVIPRecorder consts to separate namespace
 * **#4378** Created new namespace for containing platform's constant values
