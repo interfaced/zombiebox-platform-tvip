@@ -56,7 +56,7 @@ zb.device.platforms.tvip.Device = class extends zb.device.Device {
 		 * }}
 		 * @protected
 		 */
-		this._volume
+		this._volume;
 
 
 		/**
