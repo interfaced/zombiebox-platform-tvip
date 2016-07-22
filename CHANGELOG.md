@@ -4,6 +4,7 @@
 * **#1531** Add aspect ratio support.
 * **#3998** Add ViewPort class which is responsible for managing display area sizes and aspect ratio
 * **#4422** Rename abstract Video class (zb.device.Video) to AbstractVideo (zb.device.AbstractVideo)
+* **#4495** Transpiled client-side files to ES6
 
 ## Improvements
 * **#4319** Removed call `_createViewPort()` method from Video constructor
