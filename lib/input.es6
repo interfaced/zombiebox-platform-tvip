@@ -12,8 +12,8 @@ goog.require('zb.device.Input');
 
 
 /**
- * @extends {zb.device.Input}
  * @constructor
+ * @extends {zb.device.Input}
  */
 zb.device.platforms.tvip.Input = class extends zb.device.Input {
 	constructor() {

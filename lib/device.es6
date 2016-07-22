@@ -107,8 +107,6 @@ zb.device.platforms.tvip.Device = class extends zb.device.Device {
 
 	/**
 	 * @override
-	 *//**
-	 * @override
 	 */
 	exit() {
 		location.href = 'about:back';

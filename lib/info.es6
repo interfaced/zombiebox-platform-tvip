@@ -13,9 +13,9 @@ goog.require('zb.device.Info');
 
 /**
  * @param {TVIPStb} tvipStb
+ * @constructor
  * @extends {zb.device.Info}
  * @implements {zb.device.IInfo}
- * @constructor
  */
 zb.device.platforms.tvip.Info = class extends zb.device.Info {
 	constructor(tvipStb) {
