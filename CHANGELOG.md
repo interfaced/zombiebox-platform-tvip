@@ -1,0 +1,16 @@
+# v0.2.0 (27.07.16)
+
+## Features
+* **#1531** Add aspect ratio support.
+* **#3998** Add ViewPort class which is responsible for managing display area sizes and aspect ratio
+* **#4422** Rename abstract Video class (zb.device.Video) to AbstractVideo (zb.device.AbstractVideo)
+* **#4495** Transpiled client-side files to ES6
+
+## Improvements
+* **#4319** Removed call `_createViewPort(27.07.16)` method from Video constructor
+* **#4378** Created new namespace for containing platform's constant values
+* **#4503** Move calling parent class constructor to the top of child constructors
+
+## Fixes
+* **#4400** Move TVIPRecorder consts to separate namespace
+* **#4378** Created new namespace for containing platform's constant values

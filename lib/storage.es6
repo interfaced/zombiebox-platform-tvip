@@ -13,8 +13,8 @@ goog.require('zb.device.IStorage');
 
 /**
  * @param {TVIPStb} tvipStb
- * @implements {zb.device.IStorage}
  * @constructor
+ * @implements {zb.device.IStorage}
  */
 zb.device.platforms.tvip.Storage = class {
 	constructor(tvipStb) {
@@ -26,7 +26,7 @@ zb.device.platforms.tvip.Storage = class {
 
 		/**
 		 * @type {string}
-		 * @protected
+		 * @private
 		 */
 		this._prefix = '';
 	}

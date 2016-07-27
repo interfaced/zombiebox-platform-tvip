@@ -7,7 +7,8 @@
  * file that was distributed with this source code.
  */
 goog.provide('zb.device.platforms.tvip.Video');
-goog.require('zb.device.Video');
+goog.require('zb.device.AbstractVideo');
+goog.require('zb.device.platforms.tvip.ViewPort');
 goog.require('zb.html');
 
 
@@ -15,25 +16,44 @@ goog.require('zb.html');
 /**
  * Video object abstraction
  * NOTE: Video Interface operates milliseconds in all methods
- * @extends {zb.device.Video}
+ * @param {TVIPPlayer} tvipPlayer
+ * @param {TVIPEvent} tvipEvent
+ * @param {TVIPStb} tvipStb
  * @constructor
+ * @extends {zb.device.AbstractVideo}
+ * @implements {zb.device.IVideo}
  */
-zb.device.platforms.tvip.Video = class extends zb.device.Video {
-	constructor(tvipPlayer, tvipEvent) {
+zb.device.platforms.tvip.Video = class extends zb.device.AbstractVideo {
+	constructor(tvipPlayer, tvipEvent, tvipStb) {
 		super();
 
-		/**
-		 * @type {TVIPPlayer}
-		 */
-		this._tvipPlayer = tvipPlayer;
 
+		/**
+		 * @type {zb.device.platforms.tvip.ViewPort}
+		 * @protected
+		 */
+		this._viewport;
 
 
 		/**
 		 * @type {TVIPEvent}
+		 * @protected
 		 */
 		this._tvipEvent = tvipEvent;
 
+
+		/**
+		 * @type {TVIPPlayer}
+		 * @protected
+		 */
+		this._tvipPlayer = tvipPlayer;
+
+
+		/**
+		 * @type {TVIPStb}
+		 * @protected
+		 */
+		this._tvipStb = tvipStb;
 
 
 		/**
@@ -45,52 +65,42 @@ zb.device.platforms.tvip.Video = class extends zb.device.Video {
 
 		/**
 		 * @type {number}
+		 * @protected
 		 */
 		this._updatePositionTimeoutId = NaN;
 
 
 		/**
 		 * @type {number}
+		 * @protected
 		 */
 		this._startPosition = NaN;
 
 
 		/**
 		 * @type {number}
+		 * @protected
 		 */
 		this._lastPosition = NaN;
 
 
-
 		/**
 		 * @type {number}
+		 * @protected
 		 */
 		this._duration = NaN;
 
 
-
 		/**
 		 * @type {boolean}
+		 * @protected
 		 */
 		this._isBuffering = false;
 
 
+		this._initViewPort();
 		this._tvipEvent.onPlayerStateChange = this._onPlayerStateChange.bind(this);
 		this._startUpdatePosition = this._startUpdatePosition.bind(this);
-	}
-
-	/**
-	 * @override
-	 */
-	hasFeatureAspectRatio() {
-		//todo
-	}
-
-	/**
-	 * @override
-	 */
-	isAspectRatioSupported(ratio) {
-		//todo
 	}
 
 	/**
@@ -105,6 +115,7 @@ zb.device.platforms.tvip.Video = class extends zb.device.Video {
 			this._startPosition = startFrom;
 		}
 		this._tvipPlayer.playUrl(url, mode);
+		this._viewport.updateViewPort();
 	}
 
 	/**
@@ -233,40 +244,16 @@ zb.device.platforms.tvip.Video = class extends zb.device.Video {
 	}
 
 	/**
-	 * @override
+	 * @param {zb.device.ViewPort.Rect} containerRect
+	 * @return {zb.device.platforms.tvip.ViewPort}
+	 * @protected
 	 */
-	getAspectRatio() {
-		//todo
-	}
-
-	/**
-	 * @override
-	 */
-	setAspectRatio(ratio) {
-		//todo
-	}
-
-	/**
-	 * @override
-	 */
-	setDisplayArea(x, y, width, height) {
-		//todo
-	}
-
-
-	/**
-	 * @override
-	 */
-	setDisplayFullScreen(state) {
-		//todo
-	}
-
-
-	/**
-	 * @override
-	 */
-	isDisplayFullScreen() {
-		//todo
+	_createViewPort(containerRect) {
+		const plugin = {
+			stb: this._tvipStb,
+			player: this._tvipPlayer
+		};
+		return new zb.device.platforms.tvip.ViewPort(containerRect, plugin);
 	}
 
 	/**
@@ -367,7 +354,7 @@ zb.device.platforms.tvip.Video = class extends zb.device.Video {
 	}
 
 	/**
-	 * @param currentPosition
+	 * @param {number} currentPosition
 	 * @return {boolean}
 	 * @protected
 	 */

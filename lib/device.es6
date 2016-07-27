@@ -14,6 +14,7 @@ goog.require('zb.device.platforms.tvip.Storage');
 goog.require('zb.device.platforms.tvip.Video');
 
 
+
 /**
  * @constructor
  * @extends {zb.device.Device}
@@ -22,7 +23,6 @@ goog.require('zb.device.platforms.tvip.Video');
 zb.device.platforms.tvip.Device = class extends zb.device.Device {
 	constructor() {
 		super();
-
 
 		/**
 		 * default value chromo key
@@ -82,7 +82,6 @@ zb.device.platforms.tvip.Device = class extends zb.device.Device {
 		 */
 		this._tvipEvent = window['TvipEvent'];
 
-
 		this._tvipStb.reset();
 		this._tvipPlayer.reset();//if app was crashed it stop playing
 		this._tvipStb.setColorKey(this.DEFAULT_CHROMA_KEY);
@@ -103,7 +102,7 @@ zb.device.platforms.tvip.Device = class extends zb.device.Device {
 	 * @override
 	 */
 	createVideo() {
-		return new zb.device.platforms.tvip.Video(this._tvipPlayer, this._tvipEvent);
+		return new zb.device.platforms.tvip.Video(this._tvipPlayer, this._tvipEvent, this._tvipStb);
 	}
 
 	/**
