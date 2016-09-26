@@ -7,7 +7,7 @@
 * **#4495** Transpiled client-side files to ES6
 
 ## Improvements
-* **#4319** Removed call `_createViewPort(27.07.16)` method from Video constructor
+* **#4319** Removed call `_createViewPort()` method from Video constructor
 * **#4378** Created new namespace for containing platform's constant values
 * **#4503** Move calling parent class constructor to the top of child constructors
 
