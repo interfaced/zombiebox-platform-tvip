@@ -1,3 +1,9 @@
+# v0.2.1 ()
+
+## Features
+* **#5046** Added factory method `zb.device.platforms.tvip.factory.createDevice` for create Device instances. All global dependencies now located in factory method.
+* **#5046** All *.es6 files renamed to *.js
+
 # v0.2.0 (27.07.16)
 
 ## Features
