@@ -1,12 +1,4 @@
 {
   "name": "zombiebox-platform-tvip",
-  "version": "0.2.1",
-  "dependencies": {},
-  "devDependencies": {
-    "zombiebox-platform-scripts-collection": "bitbucket:interfaced/zombiebox-platform-scripts-collection#v0.3.0"
-  },
-  "scripts": {
-    "release.start": "release.start",
-    "release.finish": "release.finish"
-  }
+  "version": "0.2.1"
 }
