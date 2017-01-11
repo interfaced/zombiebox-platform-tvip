@@ -1,10 +1,10 @@
-# v0.2.1 ()
+# v0.2.1 (11.01.2017)
 
 ## Features
 * **#5046** Added factory method `zb.device.platforms.tvip.factory.createDevice` for create Device instances. All global dependencies now located in factory method.
 * **#5046** All *.es6 files renamed to *.js
 
-# v0.2.0 (27.07.16)
+# v0.2.0 (27.07.2016)
 
 ## Features
 * **#1531** Add aspect ratio support.
