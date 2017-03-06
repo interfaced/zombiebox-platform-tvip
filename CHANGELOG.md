@@ -1,3 +1,8 @@
+# v0.3.0 (14.03.2017)
+
+## Fixes
+* **#6002** Fixed aspect ratio namespace.
+
 # v0.2.1 (11.01.2017)
 
 ## Features
