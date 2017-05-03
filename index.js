@@ -31,10 +31,10 @@ class PlatformTVIP {
 		return {
 			"compilation": {
 				"externs": [
-					path.join(__dirname, 'typedef', 'tvip-event.js'),
-					path.join(__dirname, 'typedef', 'tvip-player.js'),
-					path.join(__dirname, 'typedef', 'tvip-recorder.js'),
-					path.join(__dirname, 'typedef', 'tvip-stb.js')
+					path.join(__dirname, 'externs', 'tvip-event.js'),
+					path.join(__dirname, 'externs', 'tvip-player.js'),
+					path.join(__dirname, 'externs', 'tvip-recorder.js'),
+					path.join(__dirname, 'externs', 'tvip-stb.js')
 				]
 			}
 		};
