@@ -1,4 +1,26 @@
 {
   "name": "zombiebox-platform-tvip",
-  "version": "0.3.0"
+  "version": "0.3.0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/interfaced/zombiebox-platform-tvip/issues"
+  },
+  "homepage": "https://github.com/interfaced/zombiebox-platform-tvip",
+  "files": [
+    "externs/",
+    "lib/",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "npm run lint.code && npm run lint.externs",
+    "lint.code": "eslint index.js lib/",
+    "lint.externs": "eslint --config .eslintrc-externs.js externs/"
+  },
+  "devDependencies": {
+    "eslint": "3.16.1",
+    "eslint-config-interfaced": "^0.1.0",
+    "eslint-plugin-goog": "^0.2.0",
+    "zombiebox": "^1.0.0-alpha4"
+  }
 }

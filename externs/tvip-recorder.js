@@ -10,7 +10,8 @@ function TVIPRecorder() {}
  * Добавляет новое задание на запись эфира.
  * Здесь:
  *      name - произвольное имя записи,
- *      url - URL потока (поддерживаются потоки в формате MPEGTS через UDP, RTP и HTTP, path - локальный путь для записи,
+ *      url - URL потока
+ *          поддерживаются потоки в формате MPEGTS через UDP, RTP и HTTP, path - локальный путь для записи,
  *      start и end - время начала и окончания записи в UNIX TIMESTAMP либо в формате «YYYYMMDDTHHmmss».
  * Возвращает уникальный идентификатор созданного задания.
  * @param {string} name
@@ -24,7 +25,9 @@ TVIPRecorder.prototype.addRecord = function(name, url, path, start, eng) {};
 
 
 /**
- * Удаляет задание на запись с уникальным идентификатором id. Если removeFile=true, удаляется также записанный на диск поток. Возвращает true в случае успешного удаления.
+ * Удаляет задание на запись с уникальным идентификатором id.
+ * Если removeFile=true, удаляется также записанный на диск поток.
+ * Возвращает true в случае успешного удаления.
  * @param {string} id
  * @param {boolean} removeFile
  * @return {boolean}
@@ -33,7 +36,9 @@ TVIPRecorder.prototype.cancelRecord = function(id, removeFile) {};
 
 
 /**
- * Меняет время начала и/или окончания записи с уникальным идентификатором id. Если требуется поменять только одно из значений, то второе - пустая строка. Формат start и end см. в описании addRecord.
+ * Меняет время начала и/или окончания записи с уникальным идентификатором id.
+ * Если требуется поменять только одно из значений, то второе - пустая строка.
+ * Формат start и end см. в описании addRecord.
  * @param {string} id
  * @param {string} start
  * @param {string} end
@@ -60,7 +65,7 @@ TVIPRecorder.prototype.getRecord = function(id) {};
 /**
  * id, name, startTime, endTime - соответствуют параметром метода addRecord,
  * url - url потока,
- * status - See zb.platform.tvip.consts.recorder for possible values and description
+ * status - See ...consts.recorder for possible values and description
  * @typedef {{
  *      id: string,
  *      name: string,

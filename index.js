@@ -1,5 +1,4 @@
-var path = require('path');
-
+const path = require('path');
 
 
 /**
@@ -29,8 +28,8 @@ class PlatformTVIP {
 	 */
 	getConfig() {
 		return {
-			"compilation": {
-				"externs": [
+			'compilation': {
+				'externs': [
 					path.join(__dirname, 'externs', 'tvip-event.js'),
 					path.join(__dirname, 'externs', 'tvip-player.js'),
 					path.join(__dirname, 'externs', 'tvip-recorder.js'),
@@ -45,10 +44,10 @@ class PlatformTVIP {
 	 * @override
 	 */
 	buildApp(zbApp, dir) {
-		var buildHelper = zbApp.getBuildHelper();
+		const buildHelper = zbApp.getBuildHelper();
 
 		return buildHelper.writeIndexHtml(path.join(dir, 'index.html'), this.getName())
-			.then(function (warnings) {
+			.then((warnings) => {
 				buildHelper.copyCustomWebFiles(dir);
 
 				return warnings;
