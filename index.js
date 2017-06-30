@@ -14,14 +14,12 @@ class PlatformTVIP {
 		return 'tvip';
 	}
 
-
 	/**
 	 * @override
 	 */
 	getPublicDir() {
 		return path.join(__dirname, 'lib');
 	}
-
 
 	/**
 	 * @override
@@ -39,7 +37,6 @@ class PlatformTVIP {
 		};
 	}
 
-
 	/**
 	 * @override
 	 */
@@ -54,5 +51,6 @@ class PlatformTVIP {
 			});
 	}
 }
+
 
 module.exports = PlatformTVIP;

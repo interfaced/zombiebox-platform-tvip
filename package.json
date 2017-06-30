@@ -18,9 +18,10 @@
     "lint.externs": "eslint --config .eslintrc-externs.js externs/"
   },
   "devDependencies": {
-    "eslint": "3.16.1",
-    "eslint-config-interfaced": "^0.1.0",
-    "eslint-plugin-goog": "^0.2.0",
+    "eslint": "3.19.0",
+    "eslint-config-interfaced": "0.2.0",
+    "eslint-plugin-goog": "0.2.0",
+    "eslint-plugin-interfaced": "0.1.0",
     "zombiebox": "^1.0.0-alpha4"
   }
 }
