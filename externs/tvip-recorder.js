@@ -49,7 +49,7 @@ TVIPRecorder.prototype.updateStartEndTime = function(id, start, end) {};
 
 /**
  * Возвращает список уникальных идентификаторов заданий, которые добавлены в настоящий момент.
- * @return {Array.<string>}
+ * @return {Array<string>}
  */
 TVIPRecorder.prototype.getRecordIds = function() {};
 
@@ -57,12 +57,13 @@ TVIPRecorder.prototype.getRecordIds = function() {};
 /**
  * Возвращает объект с параметрами записи с уникальным идентификатором id.
  * @param {string} id
- * @return {TVIPRecorder.record}
+ * @return {TVIPRecorder.Record}
  */
 TVIPRecorder.prototype.getRecord = function(id) {};
 
 
 /**
+ * Fields:
  * id, name, startTime, endTime - соответствуют параметром метода addRecord,
  * url - url потока,
  * status - See ...consts.recorder for possible values and description
@@ -75,4 +76,4 @@ TVIPRecorder.prototype.getRecord = function(id) {};
  *      status: string
  * }}
  */
-TVIPRecorder.record;
+TVIPRecorder.Record;

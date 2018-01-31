@@ -36,7 +36,7 @@ TVIPStb.prototype.getDisplayMode = function() {};
 /**
  * Возвращает список имен каталогов в системном каталоге directory.
  * @param {string} directory
- * @return {Array.<string>}
+ * @return {Array<string>}
  */
 TVIPStb.prototype.getDirectoryDirs = function(directory) {};
 
@@ -44,7 +44,7 @@ TVIPStb.prototype.getDirectoryDirs = function(directory) {};
 /**
  * Возвращает список объектов с данными о файлах (без каталогов) в системном каталоге directory.
  * @param {string} directory
- * @return {Array.<{
+ * @return {Array<{
  *   name: string,
  *   size: number
  * }>}
@@ -53,7 +53,7 @@ TVIPStb.prototype.getDirectoryFiles = function(directory) {};
 
 
 /**
- * см. TVIPStb.prototype.reset
+ * См. TVIPStb.prototype.reset
  * Задать фильтры имен файлов для getDirectoryFiles и getDirectoryDirs. Фильтры разделяются символом |.
  * Можно использовать символы ? и *. Например: *.avi|*.mp3
  * @param {string} filters
@@ -83,7 +83,7 @@ TVIPStb.prototype.getMainMacAddress = function() {};
  *   label - имя (метка) смонтированного ресурса для отображения пользователю;
  *   path - каталог, в который смонтирован ресурс;
  *   fstype - тип файловой системы (варианты: vfat, ntfs, ext2, ext3, nfs, cifs.
- * @return {Array.<{
+ * @return {Array<{
  *   label: string,
  *   path: string,
  *   fstype: string
@@ -124,7 +124,7 @@ TVIPStb.prototype.logDebug = function(message) {};
 
 
 /**
- * см. TVIPStb.prototype.reset
+ * См. TVIPStb.prototype.reset
  * Установка цвета UI, который будет считаться прозрачным. color - цвет в формате RGB.
  * @param {number} color
  * @return {void}
@@ -133,7 +133,7 @@ TVIPStb.prototype.setColorKey = function(color) {};
 
 
 /**
- * см. TVIPStb.prototype.reset
+ * См. TVIPStb.prototype.reset
  * Устанавливает HTTP-заголовок для будущих HTTP-запросов браузера.
  *      header - имя заголовка,
  *      value - значение заголовка.

@@ -5,8 +5,6 @@ const path = require('path');
  * @implements {ZBPlatform}
  */
 class PlatformTVIP {
-
-
 	/**
 	 * @override
 	 */

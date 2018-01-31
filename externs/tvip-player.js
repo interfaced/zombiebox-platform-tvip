@@ -176,6 +176,7 @@ TVIPPlayer.prototype.setCurrentAudioStreamIndex = function(index) {};
 
 
 /**
+ * Fields:
  * type - тип медиапотока: See ...consts.player for possible values
  * id - внутренний идентификатор (PID);
  * codec - название кодека потока;
