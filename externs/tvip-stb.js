@@ -45,8 +45,8 @@ TVIPStb.prototype.getDirectoryDirs = function(directory) {};
  * Возвращает список объектов с данными о файлах (без каталогов) в системном каталоге directory.
  * @param {string} directory
  * @return {Array<{
- *   name: string,
- *   size: number
+ *     name: string,
+ *     size: number
  * }>}
  */
 TVIPStb.prototype.getDirectoryFiles = function(directory) {};
@@ -84,9 +84,9 @@ TVIPStb.prototype.getMainMacAddress = function() {};
  *   path - каталог, в который смонтирован ресурс;
  *   fstype - тип файловой системы (варианты: vfat, ntfs, ext2, ext3, nfs, cifs.
  * @return {Array<{
- *   label: string,
- *   path: string,
- *   fstype: string
+ *     label: string,
+ *     path: string,
+ *     fstype: string
  * }>}
  */
 TVIPStb.prototype.getStorageValues = function() {};

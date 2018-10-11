@@ -182,10 +182,10 @@ TVIPPlayer.prototype.setCurrentAudioStreamIndex = function(index) {};
  * codec - название кодека потока;
  * lang - для аудиопотоков 3 буквенный код языка.
  * @typedef {{
- *      type: string,
- *      id: number,
- *      codec: string,
- *      lang : string
- *  }}
+ *     type: string,
+ *     id: number,
+ *     codec: string,
+ *     lang: string
+ * }}
  */
 TVIPPlayer.StreamInfo;
