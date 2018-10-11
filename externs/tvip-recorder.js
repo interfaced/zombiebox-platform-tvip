@@ -3,7 +3,7 @@
  * @constructor
  * @extends {HTMLElement}
  */
-function TVIPRecorder() {}
+function TvipRecorder() {}
 
 
 /**
@@ -21,7 +21,7 @@ function TVIPRecorder() {}
  * @param {string} eng
  * @return {string}
  */
-TVIPRecorder.prototype.addRecord = function(name, url, path, start, eng) {};
+TvipRecorder.prototype.addRecord = function(name, url, path, start, eng) {};
 
 
 /**
@@ -32,7 +32,7 @@ TVIPRecorder.prototype.addRecord = function(name, url, path, start, eng) {};
  * @param {boolean} removeFile
  * @return {boolean}
  */
-TVIPRecorder.prototype.cancelRecord = function(id, removeFile) {};
+TvipRecorder.prototype.cancelRecord = function(id, removeFile) {};
 
 
 /**
@@ -44,22 +44,22 @@ TVIPRecorder.prototype.cancelRecord = function(id, removeFile) {};
  * @param {string} end
  * @return {void}
  */
-TVIPRecorder.prototype.updateStartEndTime = function(id, start, end) {};
+TvipRecorder.prototype.updateStartEndTime = function(id, start, end) {};
 
 
 /**
  * Возвращает список уникальных идентификаторов заданий, которые добавлены в настоящий момент.
  * @return {Array<string>}
  */
-TVIPRecorder.prototype.getRecordIds = function() {};
+TvipRecorder.prototype.getRecordIds = function() {};
 
 
 /**
  * Возвращает объект с параметрами записи с уникальным идентификатором id.
  * @param {string} id
- * @return {TVIPRecorder.Record}
+ * @return {TvipRecorder.Record}
  */
-TVIPRecorder.prototype.getRecord = function(id) {};
+TvipRecorder.prototype.getRecord = function(id) {};
 
 
 /**
@@ -76,4 +76,4 @@ TVIPRecorder.prototype.getRecord = function(id) {};
  *     status: string
  * }}
  */
-TVIPRecorder.Record;
+TvipRecorder.Record;

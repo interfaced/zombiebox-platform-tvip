@@ -3,34 +3,34 @@
  * @constructor
  * @extends {HTMLElement}
  */
-function TVIPStb() {}
+function TvipStb() {}
 
 /**
  * Возвращает номер версии API.
  * @return {number}
  */
-TVIPStb.prototype.getApiVersion = function() {};
+TvipStb.prototype.getApiVersion = function() {};
 
 
 /**
  * Возвращает идентификатор текущего активного языка интерфейса ('en', 'ru').
  * @return {string}
  */
-TVIPStb.prototype.getCurrentLanguageCode = function() {};
+TvipStb.prototype.getCurrentLanguageCode = function() {};
 
 
 /**
  * Возвращает текущий часовой пояс (например, Europe/Moscow).
  * @return {string}
  */
-TVIPStb.prototype.getCurrentTimezone = function() {};
+TvipStb.prototype.getCurrentTimezone = function() {};
 
 
 /**
  * Возвращает текущий режим дисплея («1080i», «1080p», «720p», «576i», и т.д.).
  * @return {string}
  */
-TVIPStb.prototype.getDisplayMode = function() {};
+TvipStb.prototype.getDisplayMode = function() {};
 
 
 /**
@@ -38,7 +38,7 @@ TVIPStb.prototype.getDisplayMode = function() {};
  * @param {string} directory
  * @return {Array<string>}
  */
-TVIPStb.prototype.getDirectoryDirs = function(directory) {};
+TvipStb.prototype.getDirectoryDirs = function(directory) {};
 
 
 /**
@@ -49,17 +49,17 @@ TVIPStb.prototype.getDirectoryDirs = function(directory) {};
  *     size: number
  * }>}
  */
-TVIPStb.prototype.getDirectoryFiles = function(directory) {};
+TvipStb.prototype.getDirectoryFiles = function(directory) {};
 
 
 /**
- * См. TVIPStb.prototype.reset
+ * См. TvipStb.prototype.reset
  * Задать фильтры имен файлов для getDirectoryFiles и getDirectoryDirs. Фильтры разделяются символом |.
  * Можно использовать символы ? и *. Например: *.avi|*.mp3
  * @param {string} filters
  * @return {void}
  */
-TVIPStb.prototype.setDirectoryListFilters = function(filters) {};
+TvipStb.prototype.setDirectoryListFilters = function(filters) {};
 
 
 /**
@@ -67,14 +67,14 @@ TVIPStb.prototype.setDirectoryListFilters = function(filters) {};
  * @param {string} name
  * @return {string}
  */
-TVIPStb.prototype.getEnvValue = function(name) {};
+TvipStb.prototype.getEnvValue = function(name) {};
 
 
 /**
  * Возвращает строку, содержащую основной MAC-адрес приставки. Обычно это MAC-адрес Ethernet.
  * @return {string}
  */
-TVIPStb.prototype.getMainMacAddress = function() {};
+TvipStb.prototype.getMainMacAddress = function() {};
 
 
 /**
@@ -89,7 +89,7 @@ TVIPStb.prototype.getMainMacAddress = function() {};
  *     fstype: string
  * }>}
  */
-TVIPStb.prototype.getStorageValues = function() {};
+TvipStb.prototype.getStorageValues = function() {};
 
 
 /**
@@ -97,7 +97,7 @@ TVIPStb.prototype.getStorageValues = function() {};
  * @param {string} path
  * @return {boolean}
  */
-TVIPStb.prototype.hasDirectory = function(path) {};
+TvipStb.prototype.hasDirectory = function(path) {};
 
 
 /**
@@ -105,14 +105,14 @@ TVIPStb.prototype.hasDirectory = function(path) {};
  * @param {string} path
  * @return {boolean}
  */
-TVIPStb.prototype.hasFile = function(path) {};
+TvipStb.prototype.hasFile = function(path) {};
 
 
 /**
  * Запустить системные настройки Tvip.
  * @return {void}
  */
-TVIPStb.prototype.launchPreferences = function() {};
+TvipStb.prototype.launchPreferences = function() {};
 
 
 /**
@@ -120,20 +120,20 @@ TVIPStb.prototype.launchPreferences = function() {};
  * @param {string} message
  * @return {void}
  */
-TVIPStb.prototype.logDebug = function(message) {};
+TvipStb.prototype.logDebug = function(message) {};
 
 
 /**
- * См. TVIPStb.prototype.reset
+ * См. TvipStb.prototype.reset
  * Установка цвета UI, который будет считаться прозрачным. color - цвет в формате RGB.
  * @param {number} color
  * @return {void}
  */
-TVIPStb.prototype.setColorKey = function(color) {};
+TvipStb.prototype.setColorKey = function(color) {};
 
 
 /**
- * См. TVIPStb.prototype.reset
+ * См. TvipStb.prototype.reset
  * Устанавливает HTTP-заголовок для будущих HTTP-запросов браузера.
  *      header - имя заголовка,
  *      value - значение заголовка.
@@ -142,7 +142,7 @@ TVIPStb.prototype.setColorKey = function(color) {};
  * @param {string} value
  * @return {void}
  */
-TVIPStb.prototype.setCustomHeader = function(header, value) {};
+TvipStb.prototype.setCustomHeader = function(header, value) {};
 
 
 /**
@@ -151,7 +151,7 @@ TVIPStb.prototype.setCustomHeader = function(header, value) {};
  * @param {string} value
  * @return {void}
  */
-TVIPStb.prototype.setEnvValue = function(name, value) {};
+TvipStb.prototype.setEnvValue = function(name, value) {};
 
 
 /**
@@ -159,14 +159,14 @@ TVIPStb.prototype.setEnvValue = function(name, value) {};
  * @param {boolean} show
  * @return {void}
  */
-TVIPStb.prototype.showVirtualKeyboard = function(show) {};
+TvipStb.prototype.showVirtualKeyboard = function(show) {};
 
 
 /**
  * Сбросить настройки: прозрачного цвета; HTTP-заголовков; фильтра файлов
  * @return {void}
  */
-TVIPStb.prototype.reset = function() {};
+TvipStb.prototype.reset = function() {};
 
 
 /**
@@ -175,4 +175,4 @@ TVIPStb.prototype.reset = function() {};
  * @param {string} command
  * @return {void}
  */
-TVIPStb.prototype.execCommand = function(command) {};
+TvipStb.prototype.execCommand = function(command) {};

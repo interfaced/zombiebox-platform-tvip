@@ -3,14 +3,14 @@
  * @constructor
  * @extends {HTMLElement}
  */
-function TVIPPlayer() {}
+function TvipPlayer() {}
 
 /**
  * Сбросить воспроизведение.
  * При переходе между страницами, если не требуется продолжение проигрывания, нужно вызывать этот метод.
  * @return {void}
  */
-TVIPPlayer.prototype.reset = function() {};
+TvipPlayer.prototype.reset = function() {};
 
 
 /**
@@ -25,7 +25,7 @@ TVIPPlayer.prototype.reset = function() {};
  * playUrl ("http://domain.tv/hls/playlist.m3u8", ""); // начать проигрывание HLS-видео;
  * @return {void}
  */
-TVIPPlayer.prototype.playUrl = function(url, mode) {};
+TvipPlayer.prototype.playUrl = function(url, mode) {};
 
 
 /**
@@ -39,28 +39,28 @@ TVIPPlayer.prototype.playUrl = function(url, mode) {};
  * @param {boolean} onTop
  * @return {void}
  */
-TVIPPlayer.prototype.setVideoWindow = function(x, y, w, h, onTop) {};
+TvipPlayer.prototype.setVideoWindow = function(x, y, w, h, onTop) {};
 
 
 /**
  * Остановить воспроизведение, если оно было запущено.
  * @return {void}
  */
-TVIPPlayer.prototype.stop = function() {};
+TvipPlayer.prototype.stop = function() {};
 
 
 /**
  * Остановить воспроизведение, если оно было запущено.
  * @return {void}
  */
-TVIPPlayer.prototype.pause = function() {};
+TvipPlayer.prototype.pause = function() {};
 
 
 /**
  * Продолжить воспроизведение, если оно было поставлено на паузу.
  * @return {void}
  */
-TVIPPlayer.prototype.unpause = function() {};
+TvipPlayer.prototype.unpause = function() {};
 
 
 /**
@@ -69,28 +69,28 @@ TVIPPlayer.prototype.unpause = function() {};
  * @param {number} position
  * @return {void}
  */
-TVIPPlayer.prototype.seek = function(position) {};
+TvipPlayer.prototype.seek = function(position) {};
 
 
 /**
  * Возвращает текущую позицию воспроизведения.
  * @return {number}
  */
-TVIPPlayer.prototype.getCurrentPositionMsec = function() {};
+TvipPlayer.prototype.getCurrentPositionMsec = function() {};
 
 
 /**
  * Возвращает минимальную позицию воспроизведения (т.е. начало контента).
  * @return {number}
  */
-TVIPPlayer.prototype.getMinPositionMsec = function() {};
+TvipPlayer.prototype.getMinPositionMsec = function() {};
 
 
 /**
  * Возвращает максимальную позицию воспроизведения (т.е. конца контента).
  * @return {number}
  */
-TVIPPlayer.prototype.getMaxPositionMsec = function() {};
+TvipPlayer.prototype.getMaxPositionMsec = function() {};
 
 
 /**
@@ -98,14 +98,14 @@ TVIPPlayer.prototype.getMaxPositionMsec = function() {};
  * @param {number} value
  * @return {void}
  */
-TVIPPlayer.prototype.setVolume = function(value) {};
+TvipPlayer.prototype.setVolume = function(value) {};
 
 
 /**
  * Возвращает текущую громкость звука в интервале от 0 до 100.
  * @return {number}
  */
-TVIPPlayer.prototype.getVolume = function() {};
+TvipPlayer.prototype.getVolume = function() {};
 
 
 /**
@@ -113,14 +113,14 @@ TVIPPlayer.prototype.getVolume = function() {};
  * @param {boolean} mute
  * @return {void}
  */
-TVIPPlayer.prototype.setMute = function(mute) {};
+TvipPlayer.prototype.setMute = function(mute) {};
 
 
 /**
  * Возвращает true, если звук выключен, иначе false;
  * @return {boolean}
  */
-TVIPPlayer.prototype.getMute = function() {};
+TvipPlayer.prototype.getMute = function() {};
 
 
 /**
@@ -129,42 +129,42 @@ TVIPPlayer.prototype.getMute = function() {};
  * @param {string} mode See ...consts.player for possible values.
  * @return {void}
  */
-TVIPPlayer.prototype.setAspectRatio = function(mode) {};
+TvipPlayer.prototype.setAspectRatio = function(mode) {};
 
 
 /**
  * Возвращает тип контейнера последнего проигрываемого контента (например, mpegts, avi, matroska).
  * @return {string}
  */
-TVIPPlayer.prototype.getContainerType = function() {};
+TvipPlayer.prototype.getContainerType = function() {};
 
 
 /**
  * Возвращает количество медиапотоков в последнем проигрываемом контенте (аудио, видео, субтитров, итд).
  * @return {number}
  */
-TVIPPlayer.prototype.getStreamsCount = function() {};
+TvipPlayer.prototype.getStreamsCount = function() {};
 
 
 /**
  * @param {number} index
- * @return {TVIPPlayer.StreamInfo}
+ * @return {TvipPlayer.StreamInfo}
  */
-TVIPPlayer.prototype.getStreamInfo = function(index) {};
+TvipPlayer.prototype.getStreamInfo = function(index) {};
 
 
 /**
  * Возвращает номер потока с видео-дорожкой, проигрываемой в данный момент.
  * @return {number}
  */
-TVIPPlayer.prototype.getCurrentVideoStreamIndex = function() {};
+TvipPlayer.prototype.getCurrentVideoStreamIndex = function() {};
 
 
 /**
  * Возвращает номер потока с аудио-дорожкой, проигрываемой в данный момент.
  * @return {number}
  */
-TVIPPlayer.prototype.getCurrentAudioStreamIndex = function() {};
+TvipPlayer.prototype.getCurrentAudioStreamIndex = function() {};
 
 
 /**
@@ -172,7 +172,7 @@ TVIPPlayer.prototype.getCurrentAudioStreamIndex = function() {};
  * @param {number} index
  * @return {void}
  */
-TVIPPlayer.prototype.setCurrentAudioStreamIndex = function(index) {};
+TvipPlayer.prototype.setCurrentAudioStreamIndex = function(index) {};
 
 
 /**
@@ -188,4 +188,4 @@ TVIPPlayer.prototype.setCurrentAudioStreamIndex = function(index) {};
  *     lang: string
  * }}
  */
-TVIPPlayer.StreamInfo;
+TvipPlayer.StreamInfo;
