@@ -171,7 +171,7 @@ TVIPStb.prototype.reset = function() {};
 
 /**
  * НЕДОКУММЕНТИРОВАННЫЙ МЕТОД.
- * Для использования arescam достаточно писать TVIPStb.execCommand("arescam параметры")
+ * Для использования arescam достаточно писать TvipStb.execCommand("arescam параметры")
  * @param {string} command
  * @return {void}
  */
