@@ -3,7 +3,7 @@
  * @constructor
  * @extends {HTMLElement}
  */
-function TvipEvent() {}
+function TVIPEvent() {}
 
 
 /**
@@ -14,4 +14,4 @@ function TvipEvent() {}
  * @param {number} oldState
  * @param {number} newState
  */
-TvipEvent.prototype.onPlayerStateChange = function(oldState, newState) {};
+TVIPEvent.prototype.onPlayerStateChange = function(oldState, newState) {};

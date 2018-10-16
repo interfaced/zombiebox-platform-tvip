@@ -26,6 +26,7 @@ class PlatformTVIP {
 		return {
 			'compilation': {
 				'externs': [
+					path.join(__dirname, 'externs', 'tvip-api.js'),
 					path.join(__dirname, 'externs', 'tvip-event.js'),
 					path.join(__dirname, 'externs', 'tvip-player.js'),
 					path.join(__dirname, 'externs', 'tvip-recorder.js'),
@@ -41,7 +42,7 @@ class PlatformTVIP {
 	buildApp(zbApp, dir) {
 		const buildHelper = zbApp.getBuildHelper();
 
-		return buildHelper.writeIndexHtml(path.join(dir, 'index.html'), this.getName())
+		return buildHelper.writeIndexHTML(path.join(dir, 'index.html'), this.getName())
 			.then((warnings) => {
 				buildHelper.copyCustomWebFiles(dir);
 

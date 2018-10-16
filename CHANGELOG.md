@@ -23,5 +23,5 @@
 * **#4503** Move calling parent class constructor to the top of child constructors
 
 ## Fixes
-* **#4400** Move TvipRecorder consts to separate namespace
+* **#4400** Move TVIPRecorder consts to separate namespace
 * **#4378** Created new namespace for containing platform's constant values

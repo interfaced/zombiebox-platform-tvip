@@ -2,6 +2,7 @@
   "rules": {
     "no-empty-function": "off",
     "no-unused-vars": "off",
+    "no-var": "off",
     "interfaced/valid-jsdoc": "off",
     "interfaced/no-restricted-jsdoc-tags": "off"
   }
