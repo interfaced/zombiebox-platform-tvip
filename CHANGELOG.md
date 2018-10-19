@@ -1,3 +1,14 @@
+# v0.4.0 (20.10.2018)
+
+## Features
+* **#0000** Sync with zb 1.0.0-beta5
+* **#6087** Implemented getting locale (Info#locale)
+
+## Fixes
+* **#0000** Device#detect use environment instead of UserAgent string for platform detection
+* **#6143** Rename `typedef` to `externs`
+* **#6146** Add eslint and fix warnings
+
 # v0.3.0 (14.03.2017)
 
 ## Fixes
