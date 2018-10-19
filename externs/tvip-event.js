@@ -10,7 +10,7 @@ function TVIPEvent() {}
  * Вызывается при изменении статуса воспроизведения медиаплеера.
  * oldState - предыдущий статус плеера,
  * newState - новый статус плеера.
- * See zb.platform.tvip.consts.event for possible values
+ * See ...consts.event for possible values
  * @param {number} oldState
  * @param {number} newState
  */

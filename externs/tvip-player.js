@@ -6,7 +6,8 @@
 function TVIPPlayer() {}
 
 /**
- * Сбросить воспроизведение. При переходе между страницами, если не требуется продолжение проигрывания, нужно вызывать этот метод.
+ * Сбросить воспроизведение.
+ * При переходе между страницами, если не требуется продолжение проигрывания, нужно вызывать этот метод.
  * @return {void}
  */
 TVIPPlayer.prototype.reset = function() {};
@@ -63,7 +64,8 @@ TVIPPlayer.prototype.unpause = function() {};
 
 
 /**
- * Установить позицию воспроизведения на position в миллисекундах. Необходимо учитывать, что начало воспроизведения - это minPosition - см. ниже.
+ * Установить позицию воспроизведения на position в миллисекундах.
+ * Необходимо учитывать, что начало воспроизведения - это minPosition - см. ниже.
  * @param {number} position
  * @return {void}
  */
@@ -122,8 +124,9 @@ TVIPPlayer.prototype.getMute = function() {};
 
 
 /**
- * Устанавливает режим aspect ratio. На данный момент поддерживаются значения: «box» - Оригинал, «full» - На весь экран, «zoom» - Увеличенный.
- * @param {string} mode See zb.platform.tvip.consts.player for possible values.
+ * Устанавливает режим aspect ratio.
+ * На данный момент поддерживаются значения: «box» - Оригинал, «full» - На весь экран, «zoom» - Увеличенный.
+ * @param {string} mode See ...consts.player for possible values.
  * @return {void}
  */
 TVIPPlayer.prototype.setAspectRatio = function(mode) {};
@@ -173,15 +176,16 @@ TVIPPlayer.prototype.setCurrentAudioStreamIndex = function(index) {};
 
 
 /**
- * type - тип медиапотока: See zb.platform.tvip.consts.player for possible values
+ * Fields:
+ * type - тип медиапотока: See ...consts.player for possible values
  * id - внутренний идентификатор (PID);
  * codec - название кодека потока;
  * lang - для аудиопотоков 3 буквенный код языка.
  * @typedef {{
- *      type: string,
- *      id: number,
- *      codec: string,
- *      lang : string
- *  }}
+ *     type: string,
+ *     id: number,
+ *     codec: string,
+ *     lang: string
+ * }}
  */
 TVIPPlayer.StreamInfo;
