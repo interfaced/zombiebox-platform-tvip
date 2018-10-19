@@ -68,12 +68,12 @@ TVIPRecorder.prototype.getRecord = function(id) {};
  * url - url потока,
  * status - See ...consts.recorder for possible values and description
  * @typedef {{
- *      id: string,
- *      name: string,
- *      startTime: string,
- *      endTime: string,
- *      url: string,
- *      status: string
+ *     id: string,
+ *     name: string,
+ *     startTime: string,
+ *     endTime: string,
+ *     url: string,
+ *     status: string
  * }}
  */
 TVIPRecorder.Record;
