@@ -1,10 +1,11 @@
 const path = require('path');
+const {AbstractPlatform} = require('zombiebox');
 
 
 /**
  * @implements {ZBPlatform}
  */
-class PlatformTVIP {
+class PlatformTVIP extends AbstractPlatform {
 	/**
 	 * @override
 	 */
@@ -15,7 +16,7 @@ class PlatformTVIP {
 	/**
 	 * @override
 	 */
-	getPublicDir() {
+	getSourcesDir() {
 		return path.join(__dirname, 'lib');
 	}
 
@@ -24,30 +25,34 @@ class PlatformTVIP {
 	 */
 	getConfig() {
 		return {
-			'compilation': {
-				'externs': [
-					path.join(__dirname, 'externs', 'tvip-api.js'),
-					path.join(__dirname, 'externs', 'tvip-event.js'),
-					path.join(__dirname, 'externs', 'tvip-player.js'),
-					path.join(__dirname, 'externs', 'tvip-recorder.js'),
-					path.join(__dirname, 'externs', 'tvip-stb.js')
-				]
-			}
+			include: [
+				{
+					name: 'TVIP APIs',
+					externs: [
+						path.join(__dirname, 'externs', 'tvip-stb.js')
+					]
+				}
+			]
 		};
 	}
 
 	/**
 	 * @override
 	 */
-	buildApp(zbApp, dir) {
-		const buildHelper = zbApp.getBuildHelper();
+	async buildApp(application, distDir) {
+		const buildHelper = application.getBuildHelper();
 
-		return buildHelper.writeIndexHTML(path.join(dir, 'index.html'), this.getName())
-			.then((warnings) => {
-				buildHelper.copyCustomWebFiles(dir);
+		const warnings = await buildHelper.writeIndexHTML(path.join(distDir, 'index.html'));
+		buildHelper.copyStaticFiles(distDir);
 
-				return warnings;
-			});
+		return warnings;
+	}
+
+	/**
+	 * @override
+	 */
+	async pack(application, distDir) {
+		// Do nothing, index.html is good enough as PC artifact
 	}
 }
 
